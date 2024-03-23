@@ -1,0 +1,205 @@
+    /* Defining CSS variables (colors and dimensions) */
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-grey: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --cons-yellow: #f7dc84;
+
+    --sm:12px;
+    --md: 16px;
+    --lg: 24px;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--very-ligth-grey);
+}
+aside.menu{
+    width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--very-ligth-grey);
+    border-left: 10px solid var(--cons-yellow);
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+.menu h2{
+    font-size: var(--lg);
+}
+.menu-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--text-input-field);
+    border-bottom: 1px solid var(--very-ligth-grey);
+    height: 70px;
+    box-sizing: border-box;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 350px;
+    border-bottom: 1px solid var(--very-ligth-grey);
+}
+.categories h3{
+    align-self: flex-start;
+    margin: 20px 20px 10px 20px;
+    font-size: var(--md);
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 75%;
+    height: 60px;
+    border-radius: 10px;
+}
+.category p{
+    font-size: var(--md);
+}
+.category:hover{
+    background-color: var(--text-input-field);
+    color: var(--cons-yellow);
+    font-weight: bold;
+    border-left: 5px solid var(--cons-yellow);
+}
+.close-button{
+    width: 30px;
+    height: 30px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close-button:hover{
+    cursor: pointer;
+}
+.category:hover{
+    cursor: pointer;
+}
+.expert-container{
+    height: 90px;
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid var(--very-ligth-grey);
+    display: flex;
+    align-items: center;
+    width: calc(100%-10px);
+    box-sizing: border-box;
+}
+.service-continer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.service-continer img{
+    height: 30px;
+    padding-left: 20px;
+}
+.expert{
+    padding: 10px 20px 10px 10px;
+    text-decoration: none;
+    width: 100%;
+    color: var(--black);
+}
+.service-continer:hover{
+    font-weight: bold;
+    background-color: var(--text-input-field);
+    border: 3px solid var(--cons-yellow);
+    border-left: 5px solid var(--cons-yellow);
+    box-sizing: border-box;
+}
+.service-continer:hover .expert{
+    color: var(--cons-yellow);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    border-bottom: 1px solid var(--very-ligth-grey);
+    row-gap: 20px;
+    padding: 20px;
+    width: calc(100%-10px);
+    justify-content: center;
+    box-sizing: border-box;
+}
+.info a{
+    text-decoration: none;
+    width: fit-content;
+    font-size: medium;
+    color: var(--black);
+    padding-left: 20px;
+}
+.info a:hover{
+    font-weight: bold;
+}
+.account{
+    height: 130px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    row-gap: 10px;
+}
+.account-container{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.account-container img{
+    height: 20px;
+    padding-left: 20px;
+}
+.user{
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px 20px 10px 10px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: var(--md);
+}
+.account-container:hover{
+    font-weight: bold;
+    background-color: var(--text-input-field);
+    border: 3px solid var(--cons-yellow);
+    border-left: 5px solid var(--cons-yellow);
+    box-sizing: border-box;
+}
+.account-container:hover .user{
+    color: var(--cons-yellow);
+    box-sizing: border-box;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-top: 1px solid var(--very-ligth-grey);
+    padding: 20px 0;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+.logos .logo-solo{
+    width: 35px;
+    object-fit: cover;
+    margin-right: 4px;
+}
+.logos .beaver{
+    width: 92px;
+    object-fit: cover;
+}

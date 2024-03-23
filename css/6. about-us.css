@@ -1,0 +1,431 @@
+/* Defining CSS variables (colors and dimensions) */
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-grey: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --cons-yellow: #ffde72;
+
+    --sm:12px;
+    --md: 16px;
+    --lg: 24px;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+nav{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: var(--cons-yellow);
+    border-bottom: 1px solid var(--text-input-field);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+.nav-left .logos{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+}
+.nav-left .menu{
+    width: 25px;
+    height: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.nav-left img.logo-solo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 4px;
+    margin-left:10px;
+}
+.nav-left img.beaver{
+    width: 130px;
+    height: 30px;
+    object-fit: cover;
+}
+.nav-center{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-center .search{
+    width: 80%;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    border: none;  
+    background-color: var(--text-input-field);     
+    font-size: var(--md);     
+    padding-left: 10px;
+}
+.nav-center button{
+    height: 42px;
+    width: 40px;
+    background-color: var(--white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    border-left: 1px solid var(--text-input-field);
+}
+.nav-center button img{
+    height: 22px;
+    width: 22px;
+    object-fit: cover;
+}
+.nav-right{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    margin-right: 5%;
+    justify-content: space-between;
+}
+.nav-right .account{
+    display: flex;
+    column-gap: 15px;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+}
+.nav-right .account a{
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px 10px;
+    font-size: var(--md);
+    border-radius: 8px;
+    width: fit-content;
+    font-weight: bold;
+}
+.nav-right .account a:hover{
+    font-weight: bold;
+    background-color: var(--text-input-field);
+    box-sizing: border-box;
+    color: var(--cons-yellow);
+}
+.shopping-cart{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shopping-cart .cart{
+    cursor: pointer;
+}
+.shopping-cart .quantity{
+    position: absolute;
+    top: 21px;
+    right: -3px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-input-field);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: bold;
+}
+@media (max-width:999px){
+    .nav-left .beaver{
+    display: none;
+    }
+    .nav-center{
+    width: 60%;
+    }
+    .nav-left{
+    width: 15%;
+    }
+}
+@media (max-width:824px) {
+    .nav-right .account{
+    display: none;
+    }
+    .nav-left .beaver{
+    display: none;
+    }
+    nav{
+    display: flex;
+    justify-content: space-between;
+    }
+    .nav-center{
+    width: 75%;
+    }
+    .nav-right{
+    width: 5%;
+    }
+    .nav-left .menu{
+    width: 20px;
+    height: 16x;
+}
+.nav-left .logo-solo{
+    width: 40px;
+    height: 40px;
+}
+.nav-center .search{
+    width: 70%;          
+}
+}
+.content{
+    margin-top: 80px;
+    height: 100%;
+    width: 100%;
+}
+.name{
+    background-color: var(--cons-yellow);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.name h1{
+    margin: 0;
+    font-size:70px;
+    font-weight: 900;
+    padding: 0;
+}
+.name p{
+    text-align: center;
+}
+.slogan{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 50px;
+    box-sizing: border-box;
+    column-gap: 50px;
+}
+.slogan h2{
+    font-size: 50px;
+    text-align: left;
+}
+.trabajadores{
+    height: 80%;
+}
+.info{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background-color: rgb(82, 55, 42);
+    align-items: center;
+    justify-content: center;
+    column-gap: 100px;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+}
+.info img{
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+}
+.text-info{
+    color: var(--cons-yellow);
+}
+.text-info h3{
+    font-size: var(--lg);
+}
+.text-info p{
+    font-size: var(--md);
+}
+.roles{
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    justify-items: center; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+.roles h2{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+.opcion{
+    width: 80%;
+    height: 80%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.contrata.opcion{
+    position: relative;
+}
+.ofrece.opcion{
+    position: relative;
+}
+.opcion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-contrata{
+    position: absolute;
+    color: var(--white);
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.text-contrata h3{
+    font-size: 30px;
+}
+.text-ofrece{
+    position: absolute;
+    color: var(--white);
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.text-ofrece h3{
+    font-size: 30px;
+}
+.tools-box{
+    height: 300px;
+    width: 100%;
+    display: flex;
+}
+.tools-box .tools{
+    height: 100%;
+    width: 50%;
+}
+footer{
+    color: var(--text-input-field);
+}
+.footer-up{
+    background-color: rgb(61, 57, 51);
+    height: 200px;
+    width: 100%;
+    display: flex;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.footer-up ul li h4{
+    font-size: var(--md);
+}
+.footer-up ul li{
+    margin: 10px;
+    font-size: var(--sm);
+}
+.footer-up ul li a{
+    color: var(--text-input-field);
+    text-decoration: none;
+}
+ul.logoYtext{
+    width: 35%;
+    height: calc(100%-20px);
+    margin: 0;
+    list-style: none;
+    padding: 0 20px;
+    font-size: var(--sm);
+    box-sizing: border-box;
+}
+ul.foot{
+    width: 25%;
+    height: calc(100%-20px);
+    margin: 0;
+    list-style: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+ul.foot.social{
+    width: 20%;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    box-sizing: border-box;
+}
+.logos .logo-solo{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 4px;
+}
+.logos .beaver{
+    width: 140px;
+    object-fit: cover;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+
+}
+.media{
+    height: 20px;
+}
+ul.foot.social li:nth-child(1){
+    margin: 20px 0;
+    height: 20px;
+}
+ul.foot.social li{
+    margin: 0;
+    height: 30px;
+}
+
+ul.foot.social li a{
+    padding-left: 10px;
+}
+
+.footer-down{
+    background-color: rgb(41, 39, 37);
+    height: 80px;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font: var(--md);
+}
+.bank{
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--very-ligth-grey);
+    border-radius: 50%;
+}
+.bank img{
+    height: 35px;
+    width: 35px;
+}

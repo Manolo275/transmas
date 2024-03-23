@@ -1,0 +1,184 @@
+ /* Defining CSS variables (colors and dimensions) */
+ :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-grey: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --cons-yellow: #f7dc84;
+
+    --sm:12px;
+    --md: 16px;
+    --lg: 24px;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+nav{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: var(--cons-yellow);
+    border-bottom: 1px solid var(--text-input-field);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+.nav-left .logos{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-left .menu{
+    width: 25px;
+    height: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.nav-left .logo-solo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 4px;
+    margin-left:10px;
+}
+.nav-left .beaver{
+    width: 130px;
+    object-fit: cover;
+}
+.nav-center{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-center .search{
+    width: 80%;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    border: none;  
+    background-color: var(--text-input-field);     
+    font-size: var(--md);     
+    padding-left: 10px;
+}
+.nav-center button{
+    height: 42px;
+    width: 40px;
+    background-color: var(--white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    border-left: 1px solid var(--text-input-field);
+}
+.nav-center button img{
+    height: 22px;
+    width: 22px;
+    object-fit: cover;
+}
+.nav-right{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    margin-right: 5%;
+    justify-content: space-between;
+}
+.nav-right .account{
+    display: flex;
+    column-gap: 15px;
+    width: 80%;
+}
+.nav-right .account a{
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px 10px;
+    font-size: var(--md);
+    border-radius: 8px;
+    width: fit-content;
+    font-weight: bold;
+}
+.nav-right .account a:hover{
+    font-weight: bold;
+    background-color: var(--text-input-field);
+    box-sizing: border-box;
+    color: var(--cons-yellow);
+}
+.shopping-cart{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shopping-cart .cart{
+    cursor: pointer;
+}
+.shopping-cart .quantity{
+    position: absolute;
+    top: 21px;
+    right: -3px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-input-field);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: bold;
+}
+@media (max-width:999px){
+    .nav-left .beaver{
+    display: none;
+    }
+    .nav-center{
+    width: 60%;
+    }
+    .nav-left{
+    width: 15%;
+    }
+}
+@media (max-width:824px) {
+    .nav-right .account{
+    display: none;
+    }
+    .nav-left .beaver{
+    display: none;
+    }
+    nav{
+    display: flex;
+    justify-content: space-between;
+    }
+    .nav-center{
+    width: 75%;
+    }
+    .nav-right{
+    width: 5%;
+    }
+    .nav-left .menu{
+    width: 20px;
+    height: 16x;
+}
+.nav-left .logo-solo{
+    width: 40px;
+    height: 40px;
+}
+.nav-center .search{
+    width: 70%;          
+}
+}

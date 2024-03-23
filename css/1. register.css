@@ -1,0 +1,211 @@
+/* Defining CSS variables (colors and dimensions) */
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-grey: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --cons-yellow: #f7dc84;
+
+    --sm:12px;
+    --md: 16px;
+    --lg: 24px;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.register{
+    display: grid;
+    place-items: center;
+    background-color: var(--very-ligth-grey);
+    width: 100%;
+    height: 100vh;
+}
+.register-box{
+    display: flex;
+    width: 80%;
+    height: 90%;
+    border-radius: 30px;
+    margin: 50px;
+    position: relative;
+    background-color: var(--white);
+    overflow: hidden;
+}
+.info{
+    width: 40%;
+    position: relative;
+    background-color: var(--cons-yellow);
+    
+}
+.info img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* CSS property for maintain the proportion of the image. */
+}
+.greeting p:nth-child(3){
+    margin-top: 200px;
+    font-size: var(--sm);
+}
+.greeting{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+.greeting h2{
+    font-size: var(--lg);
+    text-align: center;
+}
+.greeting p{
+    text-align: center;
+    font-size: var(--md);
+    width: auto;
+}
+.greeting p a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+.register-right{
+    padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 60%;
+}
+.register-right >*{
+    width: 100%;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+.passwords{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+}
+.passwords input:nth-child(2){
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.register h1{
+    font-size: var(--lg);
+    margin:0;
+}
+.register-form label{
+    font-size: var(--md);
+    font-weight: bold;
+    margin: 20px 0 4px 0;
+}
+.register-form .input{
+    background-color: var(--text-input-field); 
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.logo{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img{
+    height: 100%;
+    object-fit: cover; /* CSS property for maintain the proportion of the image. */
+    margin-right: 10px;
+}
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-color: var(--text-input-field);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+}
+.primary-button {
+    background-color: var(--cons-yellow);
+    border: none;
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: bold;
+    height: 42px;
+    border-radius: 12px;
+    width: 40%;
+    cursor: pointer;
+}
+.already{
+    margin-top: 20px;
+    font-size: var(--sm); 
+    color: var(--cons-yellow);
+    text-align: center;
+    display: none;
+}
+.already p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cons-yellow);
+}
+
+@media (max-width:640px) {
+    .register-box{
+        height: 100%;
+        width: 100%;
+    }
+    .info{
+        display: none;
+    }
+    .register-right{
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    }
+    .greeting p:nth-child(3){
+    margin-top: 100px;
+    font-size: var(--sm);
+    }
+    .already{
+        display: block;
+    }
+    .passwords{
+    display: flex;
+    flex-direction: column;
+    }
+    .logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    }
+    .form{
+        margin-top: 20px;
+    }
+}
+@media (min-width:640px) and (max-width:999px) {
+    .greeting{
+    transform: translate(-50%, -50%);
+    }
+}
+@media (min-width:640px) and (max-width:1080px) {
+    .passwords{
+    display: flex;
+    flex-direction: column;
+    }
+}
